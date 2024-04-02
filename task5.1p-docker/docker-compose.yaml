@@ -1,0 +1,41 @@
+version: '3.8'
+
+services:
+  auth-server:
+    build: auth-server
+    ports:
+      - "3001:3001"
+    environment:
+      - NODE_ENV=production
+      - AUTH_PORT=3001
+      - JWT_SECRET_KEY=asy5dna58fvfdsc325fds6
+
+  calculator-server:
+    build: calculator-server
+    ports:
+      - "3002:3002"
+    environment:
+      - NODE_ENV=production
+      - CALCULATOR_PORT=3002
+      - JWT_SECRET_KEY=asy5dna58fvfdsc325fds6
+    depends_on:
+      - auth-server
+
+  frontend-server:
+    build: frontend-server
+    environment:
+      - NODE_ENV=production
+      - FRONTEND_PORT=3000
+      - JWT_SECRET_KEY=asy5dna58fvfdsc325fds6
+    depends_on:
+      - auth-server
+      - calculator-server
+
+  nginx:
+    build: ./Nginx
+    ports:
+      - "80:80"
+    depends_on:
+      - auth-server
+      - calculator-server
+      - frontend-server

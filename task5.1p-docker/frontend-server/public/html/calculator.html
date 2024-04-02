@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advanced Calculator</title>
+    <link rel="stylesheet" href="../css/calculator.css">
+</head>
+<body>
+<div class="calculator">
+    <div class="calculator-screen">
+        <div id="operation-display" class="operation-display"></div>
+        <div id="result-display" class="result-display">0</div>
+    </div>
+    <div class="calculator-keys">
+        <button type="button" class="key-function" data-operation="clear">C</button>
+        <button type="button" class="key-function" data-operation="delete">DEL</button>
+        <button type="button" class="key-operation" data-operation="sqrt">√</button>
+        <button type="button" class="key-operation" data-operation="exponent">^</button>
+
+        <button type="button" class="key-number" data-number="7">7</button>
+        <button type="button" class="key-number" data-number="8">8</button>
+        <button type="button" class="key-number" data-number="9">9</button>
+        <button type="button" class="key-operation" data-operation="divide">/</button>
+
+        <button type="button" class="key-number" data-number="4">4</button>
+        <button type="button" class="key-number" data-number="5">5</button>
+        <button type="button" class="key-number" data-number="6">6</button>
+        <button type="button" class="key-operation" data-operation="multiply">*</button>
+
+        <button type="button" class="key-number" data-number="1">1</button>
+        <button type="button" class="key-number" data-number="2">2</button>
+        <button type="button" class="key-number" data-number="3">3</button>
+        <button type="button" class="key-operation" data-operation="subtract">-</button>
+
+        <button type="button" class="key-number" data-number="0">0</button>
+        <button type="button" class="key-dot" data-dot=".">.</button>
+        <button type="button" class="key-operation" data-operation="modulus">%</button>
+        <button type="button" class="key-operation" data-operation="add">+</button>
+
+        <div class="spacer"></div>
+        <button type="button" class="key-equal" data-operation="equal">=</button>
+    </div>
+</div>
+<script src="../js/calculator.js"></script>
+</body>
+</html>

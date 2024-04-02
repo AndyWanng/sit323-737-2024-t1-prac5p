@@ -1,0 +1,78 @@
+body, h1, h2, p {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f4f4f4;
+}
+
+.hero-section {
+    background: linear-gradient(135deg, #6e8efb, #a777e3);
+    color: #fff;
+    text-align: center;
+    padding: 100px 20px;
+}
+
+.hero-section h1 {
+    margin-bottom: 20px;
+    font-size: 2.5rem;
+}
+
+.hero-section p {
+    margin-bottom: 40px;
+    font-size: 1.2rem;
+}
+
+.links {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.btn {
+    display: inline-block;
+    background: #ffffff;
+    color: #333;
+    padding: 10px 30px;
+    border-radius: 25px;
+    text-decoration: none;
+    transition: all 0.3s ease-in-out;
+}
+
+.btn-primary {
+    background: #f4f4f4;
+    color: #6e8efb;
+}
+
+.btn:hover, .btn-primary:hover {
+    transform: scale(1.05);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.feature-section {
+    display: flex;
+    justify-content: space-around;
+    margin: 40px 0;
+}
+
+.feature {
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    width: 30%;
+}
+
+.feature h2 {
+    margin-bottom: 10px;
+    font-size: 1.5rem;
+}
+
+.feature p {
+    font-size: 1rem;
+}

@@ -1,0 +1,106 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(135deg, #74b9ff, #a29bfe);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.calculator {
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+}
+
+.calculator-screen {
+    padding: 20px;
+    background-color: #e0e0e7;
+    border-bottom: 2px solid #d0d0da;
+}
+
+.operation-display, .result-display {
+    text-align: right;
+    margin: 5px 0;
+    color: #333;
+}
+
+.operation-display {
+    min-height: 20px;
+    font-size: 18px;
+}
+
+.result-display {
+    min-height: 40px;
+    font-size: 32px;
+    font-weight: bold;
+}
+
+.calculator-keys {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+    padding: 20px;
+}
+
+.calculator-keys button {
+    border: none;
+    background-color: #f7f7f7;
+    box-shadow: 0 4px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    font-size: 18px;
+    color: #333;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+}
+
+.calculator-keys button:hover {
+    background-color: #e7e7e9;
+}
+
+.calculator-keys .key-function {
+    background-color: #fdd835;
+}
+
+.calculator-keys .key-operation {
+    background-color: #fe9a76;
+}
+
+.calculator-keys .key-equal {
+    background-color: #66bb6a;
+    grid-column: span 4;
+}
+
+.calculator-keys .key-dot, .calculator-keys .key-zero {
+    grid-column: span 1;
+}
+
+.key-function, .key-operation, .key-equal {
+    color: #fff;
+}
+
+.key-dot, .key-zero {
+    background-color: #e0e0e7;
+}
+
+.spacer {
+    background-color: transparent;
+}
+
+.calculator-keys button:active {
+    box-shadow: inset 0 4px rgba(0, 0, 0, 0.2);
+}
+
+@media (max-width: 400px) {
+    .calculator {
+        width: 95%;
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .calculator-keys .key-equal {
+        grid-column: span 3;
+    }
+}
